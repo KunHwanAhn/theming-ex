@@ -10,6 +10,10 @@
     --page-color: black;
     --ink-color: white;
   }
+
+  img {
+    filter: brightness(.8) contrast(1.2);
+  }
 }
 
 body {
@@ -38,5 +42,11 @@ button {
   border-radius: 2px;
 }
 
+svg {
+  stroke: var(--ink-color);
+  fill: var(--page-color);
+}
 
+.image-container {
+  margin-top: 8px;
 }
