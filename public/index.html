@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <link rel="manifest" href="./manifest.json"> -->
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+  <meta name="supported-color-schemes" content="light dark">
+  <link rel="stylesheet" href="../src/styles/index.css">
+
+  <title>Theming</title>
+</head>
+
+<body>
+  <h1>Theming</h1>
+  <p>Using the prefers-color-scheme media feature, you can update your website’s colors to match the preferences of your
+    users.</p>
+  <p>If a user has expressed a preference for a dark color scheme in their operating system, your website’s color scheme
+    will reflect that choice.</p>
+  <p>Here’s an example of a small form:</p>
+
+  <div class="input-container">
+    <div>
+      <input type="text">
+      <button>submit</button>
+    </div>
+    <input type="range">
+    <input type="checkbox" checked>
+    <input type="radio" checked>
+    <progress max="100" value="50">50%</progress>
+  </div>
+
+  <div class="image-container">
+    <img src="https://storage.googleapis.com/web-dev-uploads/image/KT4TDYaWOHYfN59zz6Rc0X4k4MH3/mszWXspZz2CF6Fm4y05W.jpg" alt="Flowers.">
+  </div>
+
+  <div class="image-container">
+    <picture>
+      <source srcset="https://storage.googleapis.com/web-dev-uploads/image/KT4TDYaWOHYfN59zz6Rc0X4k4MH3/yNbeZfMBON7NXVNrKxdU.png" media="(prefers-color-scheme: dark)">
+      <img src="https://storage.googleapis.com/web-dev-uploads/image/KT4TDYaWOHYfN59zz6Rc0X4k4MH3/0pcgZdZTp6GfwQecxMKz.png" alt="A map of Brooklyn.">
+    </picture>
+  </div>
+
+  <script src="../src/index.js"></script>
+</body>
+
+</html>
