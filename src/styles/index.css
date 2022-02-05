@@ -1,19 +1,41 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500&display=swap");
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
 :root {
+  color-scheme: light;
   --page-color: white;
   --ink-color: black;
+  --highlight-color: red;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
+    color-scheme: dark;
     --page-color: black;
     --ink-color: white;
+    --highlight-color: pink;
   }
 
   img {
     filter: brightness(.8) contrast(1.2);
   }
+}
+
+:root { accent-color: var(--highlight-color); }
+:focus-visible { outline-color: var(--highlight-color); }
+::selection { background-color: var(--highlight-color); }
+::marker { color: var(--highlight-color); }
+:is(
+  ::-webkit-calendar-picker-indicator,
+  ::-webkit-clear-button,
+  ::-webkit-inner-spin-button,
+  ::-webkit-outer-spin-button
+) {
+  color: var(--highlight-color);
 }
 
 body {
@@ -26,17 +48,17 @@ body {
 
 input {
   font-size: 1rem;
-  background-color: var(--page-color);
+  /* background-color: var(--page-color);
   color: var(--ink-color);
-  border-color: var(--ink-color);
+  border-color: var(--ink-color); */
   border-radius: 2px;
 }
 
 button {
   font-family: "Roboto", Arial, Helvetica, sans-serif;
   font-size: 1rem;
-  background-color: var(--page-color);
-  color: var(--ink-color);
+  /* background-color: var(--page-color);
+  color: var(--ink-color); */
   text-transform: uppercase;
   letter-spacing: 0.2ch;
   border-radius: 2px;
@@ -45,6 +67,14 @@ button {
 svg {
   stroke: var(--ink-color);
   fill: var(--page-color);
+}
+
+.input-container {
+  min-inline-size: 40vw;
+  max-inline-size: 50vw;
+  display: flex;
+  flex-direction: column;
+  gap: 2ch;
 }
 
 .image-container {
